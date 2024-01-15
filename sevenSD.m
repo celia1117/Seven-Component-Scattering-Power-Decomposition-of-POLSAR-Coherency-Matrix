@@ -1,10 +1,7 @@
-function [Ps,Pd,Pv,Ph,Pod,Pcd,Pmd] = sevenSD(T)
+function [Ps,Pd,Pv,Ph,Pod,Pcd,Pmd] = sevenSD(t11,t12,t13,t22,t23,t33)
 % 7成分目标分解
 
-[lines,pixels,~,~] = size(T);
-t11 = T(:,:,1,1); t12 = T(:,:,1,2); t13 = T(:,:,1,3);
-t21 = T(:,:,2,1); t22 = T(:,:,2,2); t23 = T(:,:,2,3);
-t31 = T(:,:,3,1); t32 = T(:,:,3,2); t33 = T(:,:,3,3);
+[lines,pixels] = size(t11);
 
 TP = t11+t22+t33;
 
